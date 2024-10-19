@@ -1,0 +1,53 @@
+
+In PHP, superglobals are predefined variables that are always accessible, regardless of scope, meaning you can access them from any function, class, or file without needing to do anything special. 
+These superglobals are associative arrays that contain information such as form data, server details, session data, and more.
+
+List of PHP Superglobals:
+$_GLOBALS
+$_SERVER
+$_GET
+$_POST
+$_FILES
+$_COOKIE
+$_SESSION
+$_REQUEST
+$_ENV
+
+1. $_GLOBALS
+Description: An associative array containing references to all variables currently defined in the global scope of the script.
+Usage: Useful for accessing global variables from anywhere in the PHP script.
+
+2. $_SERVER
+Description: An array containing information such as headers, paths, and script locations. It's one of the most commonly used superglobals.
+Usage: Commonly used to get information about the request, server, and execution environment.
+
+3. $_GET
+Description: An associative array of variables passed to the current script via the URL parameters (query string).
+Usage: Typically used to collect form data after submitting a form with the "get" method or to get values passed in the URL.
+
+4. $_POST
+Description: An associative array of variables passed to the current script via the HTTP POST method.
+Usage: Commonly used to collect form data after submitting a form with the "post" method.
+
+5. $_FILES
+Description: An associative array of items uploaded to the current script via the HTTP POST method. This superglobal is used to handle file uploads.
+Usage: Used to get information about files uploaded via a form.
+
+6. $_COOKIE
+Description: An associative array of variables passed to the current script via HTTP Cookies.
+Usage: Used to retrieve cookie values sent by the client.
+
+7. $_SESSION
+Description: An associative array containing session variables available to the current script. 
+            Sessions are used to store information across multiple pages.
+Usage: Used to manage user sessions, typically for maintaining user login states.
+
+8. $_REQUEST
+Description: An associative array that contains the contents of $_GET, $_POST, and $_COOKIE.
+Usage: Used to collect data sent by GET, POST, or COOKIE. 
+      Note that using $_REQUEST can sometimes be less secure than using $_GET or $_POST directly because it mixes all input methods.
+
+9.$_ENV
+Description: An associative array of variables passed to the current script via the environment method. 
+            These variables are often provided by the server and can include information like the system path.
+Usage: Used to access environment variables, which are often set outside of the PHP script.
